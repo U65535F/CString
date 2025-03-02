@@ -1,0 +1,79 @@
+Size functions:
+- length() - calculates the length of the string
+- size() - calculates the space occupied by the string in bytes
+
+Concatination functions
+- append() - appending a new string to it, accepts both wchar_t, char, CStr, WStr
+
+Finding functions:
+- find() - for finding something in string, returns the first index of the occurrence, accepts both wchar_t, char, CStr, WStr
+- lfind() - for finding something in string, returns the last index of the occurrence, accepts both wchar_t, char, CStr, WStr
+- rfind() - calls lfind with given parameters
+
+Trimming functions:
+- triml() - remove leading spaces 
+- trimleading() - wrapper for triml, calls triml 
+- trimt() - remove trailing spaces
+- trimtrailing() - wrapper for trimt, calls trimt
+- trim() - removes leading and trailing spaces, both from string
+
+Case functions:
+- capitalize() - capitalizes the first character of string
+- tolower() - returns the lower case version of string
+- toupper() - returns the upper case version of string
+- swapcase() - swaps cases, lower case becoems upper case and vice versa, returns new string
+- title() - converts the first character of each word to upper case and returns it
+
+Conversion functions:
+- python's isnumeric but with floating point numbers also
+- stoi() - string to int, returns the int value
+- stod() - string to decimal, returns the decimal value
+- compare() - compares the string with the given string and returns comparison result
+
+Comparision functions:
+- endswith() - checks if the string ends with some given string
+- startswith() - checks if the string starts with some given string
+
+Splitting functions:
+- lsplit() - splits the string with specified separator, it starts splitting from the last and returns a list of all of it
+- rsplit() - calls lsplit
+- split() - splits the string with specified separator, it starts splitting from the start and returns a list of all of it
+- splitlines() - splits the string at each line break and returns a list of it
+
+Filling/insertion functions:
+- zfill() - fills the string with a specified number of 0 values at the beginning
+- lzfill() - fills the string with a specified number of 0 values at the end
+- fill() - fills the string with the given string value at the given index; allocates further if the string is not large enough
+- insert() - calls fill() with given params
+
+Removal and replace functions:
+- remove() - removes one occurrance of given string from the string in CStr, and returns the new version
+- removeall() - removes all occurrances of the given string from the string in CStr and returns the new version
+- replace() - replaces one occurrance of given string from the string in CStr, and returns the new version
+- replaceall() - replaces all occurances of given string from the string in CStr and returns the new version.
+- erase():
+	erase() - erases whole string
+	erase_secure() - erases the whole string in secure way
+	erase(index) - erases all the characters after the index
+	erase(index, k) - erases k number of characters after index
+	erase_c(index) - erases the character at the index
+	erase(first, last) - erases all the set of characters between the given indexes
+
+case-insensitive functions (CIS), CIS wrappers for existing functions:
+Add _cis to all such new functions
+- remove()
+- removeall()
+- replace()
+- replaceall()
+- endswith()
+- startswith()
+- find()
+- lfind()
+- rfind()
+- compare()
+
+Miscellaneous functions:
+- format() - just like std::format. uses brackets like {0}, {1}, {n-1}, {n}, {n+1} and so on. If user uses the numbering system, be sure to note that he could also repeat some numbers. Also should support "{}". so we can use something like: format("Hello {}, good {}. Greetings, {}. I hope {} went {}", username, timestate, greeting_message, your_day, great_var)
+- substr() - copies a part of string to a new string, with given starting and ending indexes
+- at() - returns the character at the given index
+- Small String Optimization (SSO) upto 20 characters
