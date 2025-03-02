@@ -1,5 +1,5 @@
 # CString
-A small and lightweight implementation of std::string (and wstring) of C++ in C. 
+A minimal, compact, full-featured and header-only string library in C inspired by other programming languages like C++ and Python.
 
 ## TODO
 Write some code 😭.
